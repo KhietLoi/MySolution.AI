@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 class ModelService(ABC):
 
     @abstractmethod
-    async def evaluate(
+    def evaluate(
         self,
         source_text: str,
         translated_text: str,
@@ -15,7 +15,7 @@ class ModelService(ABC):
         pass
 
     @abstractmethod
-    async def evaluate_batch(
+    def evaluate_batch(
         self,
         items: list[dict],
     ) -> list[float]:
